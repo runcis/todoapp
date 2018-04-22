@@ -81,6 +81,22 @@ public class MainActivity extends AppCompatActivity {
                         .create();
                 dialog.show();
                 return true;
+            case R.id.action_add_task2:
+                final EditText taskEditText2 = new EditText(this);
+                dialog = new AlertDialog.Builder(this)
+                        .setTitle("info")
+                        .setMessage("Created by Rinalds Pikše")
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                                loadTaskList();
+                            }
+                        })
+                        .create();
+                dialog.show();
+                return true;
         }
 
         return super.onOptionsItemSelected(item);
